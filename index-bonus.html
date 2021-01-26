@@ -1,27 +1,42 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    <link rel="stylesheet" href="css/style.css">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  <link rel="stylesheet" href="css/style.css">
 
-  </head>
-  <body>
+</head>
+<body>
 
-<div id="msg-text">
+  <div id="msg-text">
+    <!-- img presa da 'DATA' -->
+  <img :src= "img">
 
-  <input v-model ='message' type="text" placeholder="Scrivi il tuo messaggio">
+    <!-- //collegata funzione click per cambiare colore al testo -->
 
-<h1 :style="'color :' + textColor">{{message}}</h1>
+        <h1 :style="'color :' + textColor">Il tuo messaggio è...{{message}}</h1>
 
+    <button @click="changeColor" type="button" name="button">Cambia colore al testo</button>
 
-<img :src= "img">
-
-<button @change = "change" type="button" name="button">Cliccami</button>
-</div>
+    <input v-model ='message' type="text" placeholder="Scrivi il tuo messaggio">
 
 
-<script src="js/script-bonus.js" charset="utf-8"></script>
-  </body>
+
+
+
+
+
+
+   <div class="clicktimes">
+     <span>{{counter}}</span>
+   </div>
+
+<button @click ="counterAdd" type="button" name="button">Cliccami</button>
+  </div>
+
+
+  <script src="js/script-bonus.js" charset="utf-8"></script>
+
+</body>
 </html>
