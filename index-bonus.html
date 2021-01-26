@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="css/style.css">
+
+  </head>
+  <body>
+
+<div id="msg-text">
+
+  <input v-model ='message' type="text" placeholder="Scrivi il tuo messaggio">
+
+<h1 :style="'color :' + textColor">{{message}}</h1>
+
+
+<img :src= "img">
+
+<button @change = "Click" type="button" name="button">Cliccami</button>
+</div>
+
+
+<script src="js/script-bonus.js" charset="utf-8"></script>
+  </body>
+</html>
