@@ -8,14 +8,13 @@ var app = new Vue({
  textColor: 'red'
 
 },
+methods: {
 
- methods:{
-   Click: function(){
-   this.textColor = 'blue';
+  change: function(){
 
- }
- }
-
+    this.textColor= 'yellow';
+  }
+}
 });
 
 
